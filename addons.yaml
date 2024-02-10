@@ -4,6 +4,7 @@ microk8s-addons:
     - name: "kubearm"
       description: "testing"
       version: "1"
+      check_status: "deployment.apps/microcks"
       supported_architectures:
         - arm64
         - amd64
