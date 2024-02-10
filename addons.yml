@@ -1,0 +1,9 @@
+microk8s-addons:
+  description: "List of all addons included in Microk8s."
+  addons:
+    - name: "kubearm"
+      description: "testing"
+      version: "1"
+      supported_architectures:
+        - arm64
+        - amd64
