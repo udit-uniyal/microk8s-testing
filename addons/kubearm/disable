@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -e
+
+source $SNAP/actions/common/utils.sh
+
+"$SNAP/microk8s-helm.wrapper" uninstall kubearmor-operator -n kubearmor
+
+if [[ -f "$SNAP_COMMON/plugins/karmor" ]]; then
+    sudo rm "$SNAP_COMMON/plugins/karmor"
+fi
+
+if [[ -f "$SNAP_COMMON/bin/karmor" ]]; then
+    sudo rm "$SNAP_COMMON/bin/karmor"
+fi
